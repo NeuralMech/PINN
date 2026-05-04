@@ -26,7 +26,7 @@ to explore further in graduate research.
 
 - Raissi, M., Perdikaris, P., & Karniadakis, G. E. (2019). 
   Physics-informed neural networks. Journal of Computational Physics.
-- (Add other resources you used)
+- Physics-Informed Neural Networks and its Applications
 
 ## Note
 
