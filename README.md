@@ -24,9 +24,8 @@ to explore further in graduate research.
 
 ## References
 
-- Raissi, M., Perdikaris, P., & Karniadakis, G. E. (2019). 
-  Physics-informed neural networks. Journal of Computational Physics.
-- Physics-Informed Neural Networks and its Applications
+- Raissi, M., Perdikaris, P., & Karniadakis, G. E. (2017). Physics informed deep learning (Part I): Data-driven solutions of nonlinear partial differential equations. arXiv.
+- Lee, S. M. (2022). Physics-informed neural networks and its applications. Journal of the Korea Academia-Industrial Cooperation Society, 23(12), 755-760.
 
 ## Note
 
