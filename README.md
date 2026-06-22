@@ -1,33 +1,41 @@
 # Physics-Informed Neural Networks (PINN) Study
 
-A self-study repository for learning Physics-Informed Neural Networks 
-and applying them to fundamental mechanical systems.
+질량-스프링 기계 시스템에 Physics-Informed Neural Networks(PINN)를 적용해 보기 위한 개인 학습 저장소입니다.
+
+이 저장소의 목적은 단순히 딥러닝 모델을 학습시키는 것이 아니라, 미분방정식으로 표현되는 물리 법칙을 신경망 학습 과정에 직접 포함시키는 방법을 이해하는 데 있습니다. 현재는 질량-스프링 시스템을 예제로 사용해 PINN의 기본 구조와 손실 함수 설계를 정리하고 있습니다.
 
 ## Motivation
 
-While studying machine learning and deep learning, I became interested 
-in how physical laws can be embedded directly into neural network 
-training. PINN bridges classical physics-based modeling and modern 
-data-driven methods, which is exactly the kind of intersection I want 
-to explore further in graduate research.
+기계공학 문제에서는 운동방정식, 진동, 열전달, 유체역학처럼 물리 법칙이 명확한 경우가 많습니다. 하지만 실제 시스템에서는 노이즈, 불완전한 측정 데이터, 복잡한 경계조건 때문에 해석적 모델만으로는 충분하지 않은 경우도 있습니다.
+
+PINN은 이러한 문제에서 데이터 기반 모델과 물리 기반 모델을 연결할 수 있는 접근법입니다. 이 저장소는 향후 기계 시스템 고장 진단, 진동 해석, PHM(Prognostics and Health Management), 물리 기반 머신러닝 연구로 확장하기 위한 기초 학습 기록입니다.
 
 ## Current Contents
 
-- `simple_harmonic_motion.ipynb`: PINN solving the 1D harmonic 
-  oscillator ODE. Loss function combines data loss and physics 
-  residual loss.
+- `mass_spring_system_solutions.ipynb`  
+  질량-스프링 시스템의 1차원 조화진동 문제를 PINN으로 풀어본 노트북입니다.
+  - 문제 설정
+  - 신경망 구조 정의
+  - 데이터 손실과 물리 잔차 손실 구성
+  - 학습 결과 시각화
+  - 결과 해석 및 한계 정리
 
-## Planned Extensions
+- `PINN.pdf`  
+  PINN 개념과 실험 내용을 정리한 문서입니다.
 
-- Damped harmonic oscillator with noise (more realistic)
-- Application to NASA bearing vibration dataset (PHM context)
+- `requirements.txt`  
+  노트북 실행에 필요한 Python 패키지 목록입니다.
 
-## References
+## Method
 
-- Raissi, M., Perdikaris, P., & Karniadakis, G. E. (2017). Physics informed deep learning (Part I): Data-driven solutions of nonlinear partial differential equations. arXiv.
-- Lee, S. M. (2022). Physics-informed neural networks and its applications. Journal of the Korea Academia-Industrial Cooperation Society, 23(12), 755-760.
+현재 예제에서는 질량-스프링 시스템의 지배방정식을 사용합니다.
 
-## Note
+PINN 학습 손실은 다음 두 요소로 구성했습니다.
 
-This is a personal learning project. Code and documentation are 
-continuously being improved.
+1. 데이터 손실  
+   알려진 해 또는 관측값과 신경망 예측값의 차이를 줄입니다.
+
+2. 물리 잔차 손실  
+   신경망 출력이 운동방정식을 만족하도록 미분방정식의 잔차를 줄입니다.
+
+이를 통해 신경망이 단순히 데이터를 보간하는 것이 아니라, 물리 법칙을 만족하는 방향으로 학습되도록 구성했습니다.
