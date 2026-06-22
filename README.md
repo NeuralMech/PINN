@@ -39,3 +39,21 @@ PINN 학습 손실은 다음 두 요소로 구성했습니다.
    신경망 출력이 운동방정식을 만족하도록 미분방정식의 잔차를 줄입니다.
 
 이를 통해 신경망이 단순히 데이터를 보간하는 것이 아니라, 물리 법칙을 만족하는 방향으로 학습되도록 구성했습니다.
+
+## Planned Extensions
+
+- 감쇠가 포함된 질량-스프링 시스템
+- 노이즈가 있는 관측 데이터에서의 PINN 성능 확인
+- 진동 데이터 기반 시스템 식별
+- NASA Bearing Dataset 등을 활용한 PHM 문제 적용
+- 기계 시스템 고장 진단과 PINN의 연결 가능성 검토
+
+## References
+
+- Raissi, M., Perdikaris, P., & Karniadakis, G. E. Physics-Informed Neural Networks.
+- Lee, S. M. (2022). Physics-informed neural networks and its applications.
+- 관련 PINN 및 물리 기반 머신러닝 논문/자료는 학습 진행에 따라 추가 예정입니다.
+
+## Note
+
+이 저장소는 개인 학습 및 연구 준비를 위한 프로젝트입니다. 코드, 설명, 실험 결과는 계속 보완 중입니다.
